@@ -14,9 +14,10 @@ Description: <input type="text" ng-model="Obt.Desc"<br><p>
 <button class="" ng-click="clear()" > Clear </button>
 
 <div ng-repeat="p in Pdts">
-Product Name: {{p.PName}}
-<div ng-repeat="j in Pdts">
-Product Price: {{j.Price}}
+Product Name: {{p.PName}}<br>
+Price: {{p.Price}}<br>
+Quantity: <input type="number" ng-model="p.Quan">
+<button class="" ng-click="submit()" > Submit </button>
 </div>
 
 </div>
@@ -31,7 +32,7 @@ $scope.Obt = {
 	PName : "",
 	Price : "",
 	Desc : "",
-
+    Quan:0,
 }
 
 $scope.add = function() {
